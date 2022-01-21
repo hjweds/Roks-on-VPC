@@ -171,39 +171,3 @@ variable kms_key_id {
 }
 
 ##############################################################################
-
-##############################################################################
-# Deployment variables
-##############################################################################
-
-variable image_name {
-  description = "image for deployment where portworx volume will be mounted to for use"
-  type        = string
-  default     = "nginx"
-}
-
-variable file_path {
-  description = "path for the portworx volume to be mounted to on the pods of the deployment"
-  type        = string
-  default     = "/portworxDir"
-}
-
-##############################################################################
-
-##############################################################################
-# Block Storage Variables
-##############################################################################
-
-variable capacity {
-  description = "Capacity for all block storage volumes provisioned in gigabytes"
-  type        = number
-  default     = 100
-}
-
-variable profile {
-  description = "The profile to use for this volume."
-  type        = string
-  default     = "10iops-tier"
-}
-
-##############################################################################

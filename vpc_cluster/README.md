@@ -12,8 +12,6 @@ Variable | Type | Description | Default
 `unique_id` | string | A unique identifier need to provision resources. Must begin with a letter | 
 `ibm_region` | string | IBM Cloud region where all resources will be deployed |
 `resource_group` | string | Name of resource group to create VPC | `default`
-`enable_public_gateway` | String | Enable public gateways for subnets, true or false | `true`
-`acl_rules` | String | Access control list rule set |  `[`<br> `{` <br> `name        = "egress"`<br>  `action      = "allow"`<br>  `source      = "0.0.0.0/0"` <br>  `destination = "0.0.0.0/0"`<br>  `direction   = "inbound"`<br>`},`<br>`{` <br> `name        = "ingress"` <br>  `action      = "allow"`<br>  `source      = "0.0.0.0/0"`<br> `destination = "0.0.0.0/0"`<br>  `direction   = "outbound"`<br>`}` <br> `]`
 `machine_type` | string | The flavor of VPC worker node to use for your cluster | `bx2.4x16`
 `workers_per_zone` | number | Number of workers to provision in each subnet. Openshift worker pool size must be 2 or greater. | `2`
 `disable_public_service_endpoint` | bool | Disable public service endpoint for cluster | `false`
